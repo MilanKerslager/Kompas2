@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
     }
 
+    // při aktivaci aplikace -> registrace příjmu změny polohy
     protected void onResume() {
         super.onResume();
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_FASTEST);
